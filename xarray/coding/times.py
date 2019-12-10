@@ -23,7 +23,19 @@ from .variables import (
 )
 
 # standard calendars recognized by cftime
-_STANDARD_CALENDARS = {"standard", "gregorian", "proleptic_gregorian"}
+_STANDARD_CALENDARS = set(
+    [
+        "standard",
+        "gregorian",
+        "proleptic_gregorian",
+        "noleap",
+        "365_day",
+        "360_day",
+        "julian",
+        "all_leap",
+        "366_day",
+    ]
+)
 
 _NS_PER_TIME_DELTA = {
     "us": int(1e3),
